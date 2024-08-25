@@ -39,6 +39,7 @@ struct PacketData
   byte switch4Value;
   byte switch5Value;
   byte switch6Value;
+  byte switch7Value;
 };
 PacketData receiverData;
 void setup()
