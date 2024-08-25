@@ -317,6 +317,14 @@ void loop()
     {
       digitalWrite(buzzer, HIGH);
     }
+    if(!receiverData.switch5Value)
+    {
+      digitalWrite(HeadLight, HIGH);
+    }
+    if(!receiverData.switch7Value)
+    {
+      digitalWrite(AmbientLight, HIGH);
+    }
     else
     {
       digitalWrite(in1, LOW);
@@ -325,6 +333,9 @@ void loop()
       digitalWrite(in4, LOW);
       analogWrite(enA, LOW);
       analogWrite(enB, LOW);
+      digitalWrite(buzzer, LOW);
+    digitalWrite(HeadLight, LOW);
+    digitalWrite(AmbientLight, LOW);
     }
 
   }
@@ -337,6 +348,8 @@ void loop()
     analogWrite(enA, LOW);
     analogWrite(enB, LOW);
     digitalWrite(buzzer, LOW);
+    digitalWrite(HeadLight, LOW);
+    digitalWrite(AmbientLight, LOW);
   }
 
 }
